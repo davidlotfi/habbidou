@@ -12,15 +12,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- icon logo styles css  & bootstrap -->
     <link rel="icon" href="images/unnamed.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/ajouteProd.css">
+    <link rel="stylesheet" href="web-fonts-with-css/css/fontawesome-all.min.css">
+  
+    <title>habbidou.com</title>
 
-    	<script src="js/jquery.min.js"></script>
-      <link rel="stylesheet" href="css/bootstrap.min.css">
-      <link rel="stylesheet" href="css/ajouteProd.css">
-      <link rel="stylesheet" href="web-fonts-with-css/css/fontawesome-all.min.css">
-
-      <title>Vendez vos Produit ...</title>
-   <style media="screen">
+  <style media="screen">
      h2{
        color: #40bf16;
      }
@@ -31,52 +32,53 @@
       margin: 0 auto 15px;
       padding: 10px;
       width: 40%;
-    }
-    .prevIMG{
-      max-width: 100px;
-      margin-left: 4px;
-      float: left;
-    }
+     }
+     .prevIMG{
+       max-width: 100px;
+       margin-left: 4px;
+       float: left;
+     }
     .box:hover {
        transform:scale(1.7);
        transition: transform .2s;
        border: 1px solid #007bff;
-     }
+      }
      label{
       color: #c61c6f;
-     }
+      }
      .dropdown-menu {
           left: auto;
           right: 20px;
          }
 
-</style>
+  </style>
 </head>
+
 <body>
 
  <header>
    <!-- Navigation -->
    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
      <div class="container">
-       <a class="navbar-brand" href="#">Habiba.com</a>
+       <a class="navbar-brand" href="#">habbidou.com</a>
        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
          <span class="navbar-toggler-icon"></span>
        </button>
        <div class="collapse navbar-collapse" id="navbarResponsive">
          <ul class="navbar-nav ml-auto">
            <li class="nav-item">
-            <a class="nav-link" href="index.php"><i class='fas fa-home' style='font-size:20px'></i></a>
+            <a class="nav-link" href="index.php"> <!--<i class='fas fa-home' style='font-size:20px'></i>--> الرئسية</a>
            </li>
            <li class="nav-item">
               <!-- <a class="nav-link"  href="#">About</a>-->
            </li>
            <li class="nav-item">
-             <a class="nav-link" href="renewed.php" target="_blank">Services</a>
+             <a class="nav-link" href="renewed.php">ماذا ابيع</a>
            </li>
            <li class="nav-item">
               <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" href="#"><i class='fas fa-user-circle' style='font-size:20px'></i></a>
               <div class="dropdown-menu" href="#">
-                 <a class="dropdown-item" href="controleur/logout.php"><i class="fas fa-power-off"></i> Déconnexion</a>
+                 <a class="dropdown-item" href="controleur/logout.php"><i class="fas fa-power-off"></i> خروج</a>
               </div>
            </li>
 
@@ -86,9 +88,14 @@
    </nav>
 
  </header>
- <br><br><br><br>
-
+ <br><br><br>
+ 
  <div class="container mb-4">
+  <div class="alert alert-success text-right" role="alert">  مرحبا يمكن بدا البيع العملية تستغرق بضع ثواني فقط<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+  <span aria-hidden="true">&times;</span>
+
+  </div>
+
    <div class="<?php echo $message_class; ?>" role="alert"><?php echo $message_erro;?></div>
 
      <h2 class="text-center"><em><!--Ajoute un Produit--></em></h2>
@@ -146,7 +153,7 @@
                <div class="modal-dialog modal-sm">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLongTitle">Habiba.com</h5>
+                      <h5 class="modal-title" id="exampleModalLongTitle">Habbidou.com</h5>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                      </button>
@@ -188,7 +195,7 @@
       </select>
        </div></br>
 
-       <div class="col-sm-10 col-md-6">
+  <!--    <div class="col-sm-10 col-md-6">
       <select name="_marque" class="form-control">
         <option selected >Marque de Produit</option>
         <option>---------- Téléphone ----------</option>
@@ -210,7 +217,7 @@
         <option>---------------------------</option>
         <option value="14">Autre Marque</option>
       </select>
-        </div></br>
+    </div></br> -->
 
       <div class="form-group form-group-lg">
          <label class="col-sm-2 control-label">Téléphone</label>
@@ -281,6 +288,5 @@
        <button type="submit" class="btn btn-primary" name="commit" style="margin-left: 220px;">Terminer</button>
     </form>
  </div>
-
 
 <?php include('include/footer.php'); ?>

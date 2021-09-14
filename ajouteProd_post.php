@@ -10,7 +10,7 @@
 
 if (isset($_POST['commit'])) {
    if (!empty($_FILES['1']) AND !empty($_POST['_description']) AND !empty($_POST['_detail'])  AND !empty($_POST['_prix']) AND !empty($_POST['_categorie'])
-       AND !empty($_POST['_marque']) AND !empty($_POST['_telephone']) AND !empty($_POST['_willaya'])){
+        AND !empty($_POST['_telephone']) AND !empty($_POST['_willaya'])){
              AjouterProduit();
     }else {
 
@@ -20,22 +20,27 @@ if (isset($_POST['commit'])) {
    }
 }
 
+function redirect_to($location){
+   header('location:'.$location);
+}
+
 function AjouterProduit(){
   global $dbd;
-  $req=$dbd->prepare('INSERT INTO produit(categorie,marque,description,detail,prix,telephone,image,image2,image3,image4,willaya) VALUES(?,?,?,?,?,?,?,?,?,?,?)');
+  $req=$dbd->prepare('INSERT INTO produit(categorie,description,detail,prix,telephone,image,image2,image3,image4,willaya) VALUES(?,?,?,?,?,?,?,?,?,?)');
 
   $images = image_secondaire();
   $_POST['_categorie'];
-  $_POST['_marque'];
+//  $_POST['_marque'];
   $_POST['_description'];
   $_POST['_detail'];
   $_POST['_prix'];
   $_POST['_telephone'];
   $_POST['_willaya'];
 
-  $req->execute(array($_POST['_categorie'],$_POST['_marque'],$_POST['_description'],$_POST['_detail'],$_POST['_prix'],$_POST['_telephone'],$images[1],$images[2],$images[3],$images[4],$_POST['_willaya']));
+  $req->execute(array($_POST['_categorie'],$_POST['_description'],$_POST['_detail'],$_POST['_prix'],$_POST['_telephone'],$images[1],$images[2],$images[3],$images[4],$_POST['_willaya']));
   $req->closeCursor();
-  header('Location:ajouteProdAlert.php');
+  // header('Location:ajouteProdAlert.php');
+  redirect_to("ajouteProdAlert.php");
 
  }
 
