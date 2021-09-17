@@ -1,17 +1,14 @@
 <?php
-
    include_once('controleur/inscrir_post.php');
-
  ?>
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <!-- styles css -->
     <link rel="icon" href="images/unnamed.png">
     <link rel="stylesheet" href="css/login.css">
-
-    <title>habiba.com</title>
+    <title>habbidou.com</title>
   </head>
 <style media="screen">
   body{
@@ -62,7 +59,6 @@
      }
      .auth-form{margin:0 auto;width:340px;}
      .flash{
-
        border-radius: 5px;
        border-style: solid;
        border-width: 1px;
@@ -72,30 +68,29 @@
        background-color: #ffdce0;
        color: #86181d;
        border-color: rgba(27,31,35,.15);
-
      }
 
 </style>
  <body>
 
         <form class="" action="inscrir.php" method="post">
-
-          <h1>C'est gratuit et ca le restera toujour gratuit</h1>
+          <h1>انشاءحساب في الموقع</h1>
+          <h1>مجاني وسيظل دائمًا مجانيًا</h1>
           <div class="auth-form pxx-3">
 
-              <div class="<?php echo $message_class; ?>" role="alert"><?php echo $message_erro;?></div>
+            <div class="<?php echo $message_class; ?>" role="alert"><?php echo $message_erro;?></div>
 
             <div class="d auth-form-body">
-              <label for="login_field">  Choisissez votre nom d'utilisateur ou email address </label>
+              <label for="login_field">  اختر اسم المستخدم أو عنوان البريد الإلكتروني </label>
               <input type="text" name="nom_user" id="" class="form-control input-block" required>
-              <label for="password">  Créez un mot de passe </label>
+              <label for="password"> انشاء كلمة السر </label>
               <input type="password" name="motpass" id="" class="form-control input-block" required>
-              <label for="password">  Confirmez votre mot de passe </label>
+              <label for="password">  تأكيد كلمة السر </label>
               <input type="password" name="Confmotpass" id="" class="form-control input-block" required>
-              <input type="submit" name="commit" value="Terminé" class="btn btn-primary btn-block"><br>
-                &copy; <?php echo date("Y", time());?> Habiba.com
+              <input type="submit" name="commit" value="انشاء حساب" class="btn btn-primary btn-block"><br>
+                &copy; <?php echo date("Y", time());?> Habbidou.com
             </div>
-            <p class="ppp mt-3">Vous etre membre? <a href="login.php">Se connecter</a></p>
+            <p class="ppp mt-3">هل لديك حساب ؟ <a href="login.php">تسجيل الدخول</a></p>
 
           </div>
         </form>
