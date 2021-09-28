@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,8 +22,7 @@
           opacity: 0.7;
           filter: alpha(opacity=50); /* For IE8 and earlier */
         }
-
-  </style>
+   </style>
 </head>
 <body style="">
 
@@ -32,14 +30,14 @@
    <!-- Navigation -->
    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
      <div class="container">
-       <a class="navbar-brand" href="index.php">Habiba.com</a>
+       <a class="navbar-brand" href="index.php">Habbidou.com</a>
        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
          <span class="navbar-toggler-icon"></span>
        </button>
        <div class="collapse navbar-collapse" id="navbarResponsive">
          <ul class="navbar-nav ml-auto">
            <li class="nav-item">
-            <!-- <a class="nav-link" href="index.php">Home</a>-->
+             <a class="btn btn-secondary" href="ajouteProd.php">ابدأ البيع</a>
            </li>
            <li class="nav-item">
             <!--   <a class="nav-link" href="#">About</a> -->
@@ -54,100 +52,97 @@
        </div>
     </div>
    </nav>
-
  </header>
-<br><br><br><br>
+
+<br><br><br>
+<div class="container">
+    <h3 class="text-success text-right">كيف يمكنني البدء في البيع؟</h3>
+        <h5 class="text-primary text-right"> Habbidou.com سجل لتصبح بائعًا على  <img src="images/check.25.png" alt="" style=""> </h5>
+        <p class="text-right">إذا لم تقم ببيع منتجات على الإطلاق في الموقع فكل ما عليك فعله هو التسجيل في الموقع العملية بسيطة جدا .<a href="inscrir.php" target="_blank"> سجل من هنا</a> </p>
+</div>
+
+<div class="container mb-3">
+   <div class="row">
+     <section class="col-lg-5">
+         <img class="img-thumbnail opcity" src="imagecat\francis-farago-ZD_R3lOqwSo-unsplash.jpg" alt="">
+     </section>
+      <section class="col-lg-7">
+        <div class="row no-gutters">
+          <div class="">
+              <img class="img-thumbnail imheigt opcity" src="imagecat\denise-jans-HoqYAnwR-1g-unsplash.jpg" alt="">
+          </div>
+          <div class="">
+              <img class="img-thumbnail imheigt opcity" src="imagecat\daniel-romero-q-RQba-XCgU-unsplash.jpg" alt="">
+          </div>
+          <div class="">
+              <img class="img-thumbnail imheigt opcity" src="imagecat\museums-victoria-QSBm03YHtrI-unsplash.jpg" alt="">
+          </div>
+          <div class="">
+              <img class="img-thumbnail imheigt opcity" src="imagecat\nnn.jpg" alt="">
+          </div>
+        </div>
+      </section>
+   </div>
+</div>
+
+<br>
 <div class="container mb-4">
-  <h3 style="color : var(--pink);">Commencez à vender vos produits et développez votre activité</h3><br>
-  <h5 class="text-center text-primary">je vender quoi ?</h5>
+  <h3 class="text-right" style="color : var(--pink);">ابدأ في بيع منتجاتك وتنمية عملك</h3><br>
+  <h5 class="text-center text-primary">أبيع ماذا؟</h5>
   <div class="row text-center">
       <section class="col-lg-2">
         <img src="images/games.png" alt="">
-        <p>Consoles et jeux vidéo</p>
+        <p>العاب الفيديو</p>
       </section>
       <section class="col-lg-2">
         <img src="images/laptop.png" alt="">
-        <p>Ordinateurs portables </p>
+        <p>أجهزة الكمبيوتر</p>
       </section>
       <section class="col-lg-2">
         <img src="images/mobile.png" alt="">
-        <p>Smartphones</p>
+        <p>الهواتف</p>
       </section>
       <section class="col-lg-2">
         <img src="images/tablette.png" alt="">
-        <p>Tablettes</p>
+        <p>أجهزة لوحية</p>
       </section>
       <section class="col-lg-2">
         <img src="images/camera.png" alt="">
-        <p>Appareils photo</p>
+        <p>الكاميرات</p>
       </section>
       <section class="col-lg-2">
         <img src="images/audio.png" alt="">
-        <p>Casques & audio</p>
+        <p>سماعات الرأس والصوت</p>
       </section>
   </div><!-- row -->
 
   <div class="row text-center">
       <section class="col-lg-2">
         <img src="images/tv.png" alt="">
-        <p>Télévisions</p>
+        <p>التلفزيونات</p>
       </section>
       <section class="col-lg-2">
         <img src="images/bureau.png" alt="">
-        <p>Matériel de bureau </p>
+        <p>اللوازم المكتبية</p>
       </section>
       <section class="col-lg-2">
         <img src="images/tools.png" alt="">
-        <p>Outils domestiques</p>
+        <p>الأدوات المنزلية</p>
       </section>
       <section class="col-lg-2">
         <img src="images/watch.png" alt="">
-        <p>Montres d'occasion</p>
+        <p>الساعات المستعملة</p>
       </section>
       <section class="col-lg-2">
         <img src="images/elctromenage.png" alt="">
-        <p>Appareils électroménagers</p>
+        <p>اجهزة كهرومنزلية</p>
       </section>
       <section class="col-lg-2">
         <img src="images/kitchen.png" alt="">
-        <p>Petit électroménager</p>
+        <p>الاجهزة الصغيرة</p>
       </section>
   </div><!-- row2 -->
 
-
-</div>
-<div class="container">
-    <h3 class="text-success">Comment puis-je commencer à vendre ?</h3>
-        <h5 class="text-primary"> <img src="images/check.25.png" alt="" style="">  Enregistrez-vous pour devenir vendeur sur Habiba.com </h5>
-        <p>Si vous n'avez encore jamais vendu des produits sur Habiba.com, il vous suffit de vous inscrire en utilisant votre adresse e-mail. <a href="inscrir.php" target="_blank">S'inscrire ici</a></p>
-
-</div>
-
-<div class="container mb-3">
-   <div class="row">
-     <section class="col-lg-5">
-         <img class="img-thumbnail opcity" src="imagecat\dung-tr-n-vi-t-4ZtrbKfJQHs-unsplash.jpg" alt="">
-     </section>
-      <section class="col-lg-7">
-        <div class="row no-gutters">
-          <div class="">
-              <img class="img-thumbnail imheigt opcity" src="imagecat\hello-i-m-nik-m7PaAQkxgxw-unsplash.jpg" alt="">
-          </div>
-          <div class="">
-              <img class="img-thumbnail imheigt opcity" src="imagecat\william-iven-TMOeGZw9NY4-unsplash.jpg" alt="">
-          </div>
-          <div class="">
-              <img class="img-thumbnail imheigt opcity" src="imagecat\frankjsksj.jpg" alt="">
-          </div>
-          <div class="">
-              <img class="img-thumbnail imheigt opcity" src="imagecat\qx2J3TsRsk.jpg" alt="">
-          </div>
-        </div>
-
-
-      </section>
-
-   </div>
-</div>
+ </div>
 
 <?php include('include/footer.php'); ?>
