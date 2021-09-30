@@ -1,27 +1,29 @@
 <?php
-  //include('include/Connexion.php');
-  include('include/header.php');
-  include('menu_categorie.php');
-$reponse=$dbd->prepare('SELECT id_produit,marque,description,detail,prix,image,image2,image3,image4,telephone,date,nom_willaya,nom FROM produit,willaya,brands  WHERE produit.willaya=willaya.ID_willaya AND produit.marque=brands.id AND id_produit=?');
-$reponse->execute(array($_GET['billet']));
-$donnes=$reponse->fetch() ;
-$dateItem= strtotime($donnes['date']);
-
+    include('include/header.php');
+    include('menu_categorie.php');
  ?>
-
+<?php
+   // Note : si le visiteur modifier URL sur la variable billet contenu de page sera vide manque ??
+    // solution propose par le site de zero page 193
+     $reponse=$dbd->prepare('SELECT id_produit,description,detail,prix,image,image2,image3,image4,telephone,date,nom_willaya,nom FROM produit,willaya,brands  WHERE produit.willaya=willaya.ID_willaya AND id_produit=?');
+     $reponse->execute(array($_GET['billet']));
+     $count=$reponse->rowCount();
+     $donnes=$reponse->fetch();
+     $dateItem= strtotime($donnes['date']);
+  ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/easyzoom.css" />
-  <link rel="stylesheet" href="web-fonts-with-css/css/fontawesome-all.min.css">
-
-  <title>Bootstrap</title>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <!-- styles css & bootstrap -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/easyzoom.css" />
+      <link rel="stylesheet" href="web-fonts-with-css/css/fontawesome-all.min.css">
+      <title></title>
 </head>
 <body>
 
@@ -29,34 +31,38 @@ $dateItem= strtotime($donnes['date']);
      .k img{
        width: 100px;
        height: 100px;
-     }
+       }
      #image-gallery .modal-footer{
-     display: block;
-   }
-   .mim img{
-     max-width: 500px;
-     height: 400px;
-
-   }
-   .modal-body {
-    text-align: -webkit-center;
-  }
-  .list-group-item:hover{
-
-     color: #337ab7;
-     text-shadow:  0 0 1em #337ab7;
-     cursor: pointer;
-   }
-   .list-group{
-     margin-top: 10px;
-     position: fixed;
-   }
-
+       display: block;
+       }
+     .mim img{
+       max-width: 500px;
+       height: 400px;
+      }
+     .modal-body {
+       text-align: -webkit-center;
+      }
+     .list-group-item:hover{
+       color: #337ab7;
+       text-shadow:  0 0 1em #337ab7;
+       cursor: pointer;
+     }
+     .list-group{
+       margin-top: 10px;
+       position: fixed;
+     }
   </style>
 
-
-
 <br><br><br>
+
+  <?php if ($count == 0) { ?>
+         <div class="container">
+              <div class="col-lg-6 col-md-3">
+                  <img src="images/404.png" alt="" style="width:720px; height:600px;">
+              </div>
+          </div>
+  <?php }else { ?>
+
     <div class="row m-3">
        <section class="col-sm-8">
          <div class="card mb-3" style="width: 100%;">
@@ -85,7 +91,7 @@ $dateItem= strtotime($donnes['date']);
          <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
             <div class="card-header"><i style="font-size:20px" class="fa">&#xf2b5; </i>&nbsp; Cantacter le vandeur</div>
               <div class="card-body">
-                <h5 class="card-title"><i class="fa fa-phone" style="font-size:20px"> </i> <?php echo htmlspecialchars($donnes['telephone']); ?></h5>
+                <h5 class="card-title"><i class="fa fa-phone" style="font-size:20px"> </i> 0<?php echo htmlspecialchars($donnes['telephone']); ?></h5>
                 <h5><i class="fa fa-map-marker-alt" style="font-size:20px"></i> <?php echo htmlspecialchars($donnes['nom_willaya']); ?></h5>
                 <p class="card-text">Cantacter le vandeur pour obtenir des informations plus précises sur les prix et la disponibilité.</p>
                 <i class="fa fa-truck" style="font-size:20px;  margin-left:05px; float:right"></i>
@@ -133,7 +139,7 @@ $dateItem= strtotime($donnes['date']);
              <div class="modal-dialog modal-lg">
                  <div class="modal-content">
                      <div class="modal-header">
-                         <h4 class="modal-title text-success" id="image-gallery-title">Habiba.com</h4>
+                         <h4 class="modal-title text-success" id="image-gallery-title">Habbidou.com</h4>
                          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span>
                          </button>
                      </div>
@@ -149,8 +155,8 @@ $dateItem= strtotime($donnes['date']);
                  </div>
              </div>
          </div>
+  <?php } ?>
 
-      <!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>-->
       <script src="js/jquery3.min.js"></script>
       <script src="js/easyzoom.js"></script>
       <script>
@@ -160,6 +166,6 @@ $dateItem= strtotime($donnes['date']);
         var api1 = $easyzoom.filter('.easyzoom--with-thumbnails').data('easyZoom');
       </script>
 
-<script src="js/modal.js"></script>
+ <script src="js/modal.js"></script>
 
 <?php include('include/footer.php'); ?>
