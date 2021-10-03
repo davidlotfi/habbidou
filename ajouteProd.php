@@ -91,9 +91,8 @@
  <br><br><br>
  
  <div class="container mb-4">
-  <div class="alert alert-success text-right" role="alert">  مرحبا يمكن بدا البيع العملية تستغرق بضع ثواني فقط<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+  <div class="alert alert-success text-right" role="alert">  مرحبا يمكن بدا البيع  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
   <span aria-hidden="true">&times;</span>
-
   </div>
 
    <div class="<?php echo $message_class; ?>" role="alert"><?php echo $message_erro;?></div>
