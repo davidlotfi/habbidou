@@ -1,10 +1,10 @@
 <?php
-
-  require_once('include/Connexion.php');
+  require_once('C:\xampp\htdocs\doudouphp\github\version1\include\Connexion.php');
 
   $message_erro='';
   $message_class='';
 
+// les requet preparer élimine les risques d'injection SQL :)
 function check_pseudo($pseudo)
 {
   global $dbd;
@@ -15,7 +15,6 @@ function check_pseudo($pseudo)
   $req1->closeCursor();
   return $nb_pseudo;
 }
-
 
 function AjouterUser()
 {
@@ -44,13 +43,11 @@ if (isset($_POST['commit'])) {
       }else {
         $message_erro="Ce nom il exist dejat !";
         $message_class='flash flash-full';
-
       }
 
     }else {
        $message_erro="La confirmation de mot de pass est invalide !";
        $message_class='flash flash-full';
-
       }
 
   }else {
