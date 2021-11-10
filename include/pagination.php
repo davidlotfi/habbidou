@@ -1,6 +1,4 @@
 <?php
-
-
   /**
    *  Pagination class
    */
@@ -39,8 +37,6 @@
   		   return $this->next_page() <= $this->total_pages() ? true : false;
   	  }
 
-
   }
-
 
  ?>
