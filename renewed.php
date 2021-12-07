@@ -10,7 +10,7 @@
       <link rel="stylesheet" href="css/bootstrap.min.css">
       <link rel="stylesheet" href="web-fonts-with-css/css/fontawesome-all.min.css">
 
-      <title>Vender vos Produit ...</title>
+      <title>Habbidou.com: ابدأ في بيع منتجاتك وتنمية عملك مجانا على</title>
    <style media="screen">
         .imheigt{
           height: 150px;

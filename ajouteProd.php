@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/ajouteProd.css">
     <link rel="stylesheet" href="web-fonts-with-css/css/fontawesome-all.min.css">
-  
+
     <title>habbidou.com</title>
 
   <style media="screen">
@@ -67,6 +67,15 @@
        <div class="collapse navbar-collapse" id="navbarResponsive">
          <ul class="navbar-nav ml-auto">
            <li class="nav-item">
+             <a class="btn btn-outline-warning" href="#" data-toggle="modal" data-target=".bd-example-modal-lg">شاهد
+               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera-reels" viewBox="0 0 16 16">
+                 <path d="M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM1 3a2 2 0 1 0 4 0 2 2 0 0 0-4 0z"/>
+                 <path d="M9 6h.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 7.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 16H2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h7zm6 8.73V7.27l-3.5 1.555v4.35l3.5 1.556zM1 8v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1z"/>
+                 <path d="M9 6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM7 3a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+               </svg>
+             </a>
+           </li>
+           <li class="nav-item">
             <a class="nav-link" href="index.php"> <!--<i class='fas fa-home' style='font-size:20px'></i>--> الرئسية</a>
            </li>
            <li class="nav-item">
@@ -89,7 +98,7 @@
 
  </header>
  <br><br><br>
- 
+
  <div class="container mb-4">
   <div class="alert alert-success text-right" role="alert">  مرحبا يمكن بدا البيع العملية تستغرق بضع ثواني فقط<button type="button" class="close" data-dismiss="alert" aria-label="Close">
   <span aria-hidden="true">&times;</span>
@@ -118,7 +127,6 @@
                </div>
          </div>
 
-
        <div class="form-group form-group-lg">
          <label class="col-sm-2 control-label">Déscription</label>
          <div class="col-sm-10 col-md-6">
@@ -140,17 +148,16 @@
 
           <div class="col-sm-10 col-md-6">
               <label class="col-sm-2 control-label">Prix :</label>
-             <a class="link" data-toggle="modal" data-target=".bd-example-modal-sm" href="" style="float:right">Voir l'exemple</a><br>
+             <a class="link" style="float:right">Voir l'exemple</a><br>
               <div class="input-group ">
-
                   <input name="_prix" type="text" class="form-control" id="Prix" placeholder="le prix en DA Algerinne" maxlength="11" required>
                    <div class="input-group-append">
-                          <div class="input-group-text">DA</div>
+                        <div class="input-group-text">DA</div>
                    </div>
              </div>
 
-             <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-               <div class="modal-dialog modal-sm">
+             <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+               <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
                       <h5 class="modal-title" id="exampleModalLongTitle">Habbidou.com</h5>
@@ -159,13 +166,9 @@
                      </button>
                    </div>
                    <div class="modal-body">
-                       <div class="card"  style="border: 1px solid #777;">
-                         <img class="card-img-top" src="images/puzzle.jpg" alt="Card image cap" style="height:130px">
-                         <div class="card-body">
-                            <h6 class="card-title text-success">1000 DA</h6>
-                            <p class="card-text">Paper Puzzle Toy Educational Developmental Baby Kids.</p>
-                         </div>
-                      </div>
+                     <div class="embed-responsive embed-responsive-16by9">
+                       <iframe  src="https://www.youtube.com/embed/BgO_r25C2Ns" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
                    </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -282,7 +285,6 @@
         <option value="46">AIN-TEMOUCHENT - 46</option>
         <option value="47">GHARDAIA - 47</option>
         <option value="48">GHELIZANE - 48</option>
-
       </select>
         </div></br>
        <button type="submit" class="btn btn-primary" name="commit" style="margin-left: 220px;">Terminer</button>
